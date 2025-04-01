@@ -70,8 +70,6 @@ services:
 
   worker:
     image: twentycrm/twenty:${TAG:-latest}
-    volumes:
-  
     command: ["yarn", "worker:prod"]
     environment:
       PG_DATABASE_URL: postgres://${PG_DATABASE_USER:-postgres}:${PG_DATABASE_PASSWORD:-postgres}@${PG_DATABASE_HOST:-db}:${PG_DATABASE_PORT:-5432}/default
